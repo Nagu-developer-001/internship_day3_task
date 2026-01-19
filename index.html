@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+
+    <style>
+        /* basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* navbar */
+        .navbar {
+            display: flex;                  /* flexbox enabled */
+            justify-content: space-between; /* space between logo and menu */
+            align-items: center;            /* vertical alignment */
+            padding: 15px 25px;
+            background-color: #222;
+            color: white;
+        }
+
+        .menu {
+            display: flex;                  /* menu items in row */
+            gap: 20px;
+        }
+
+        /* cards section */
+        .cards {
+            display: flex;                  /* flex container */
+            flex-wrap: wrap;                /* wrap on small screens */
+            justify-content: center;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .card {
+            width: 220px;
+            height: 130px;
+            background-color: #f2f2f2;
+            display: flex;
+            align-items: center;            /* center text vertically */
+            justify-content: center;        /* center text horizontally */
+            border-radius: 6px;
+        }
+
+        /* mobile view */
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;     /* stack navbar items */
+            }
+
+            .menu {
+                flex-direction: column;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- navigation bar -->
+    <div class="navbar">
+        <h3>My Website</h3>
+        <div class="menu">
+            <span>Home</span>
+            <span>About</span>
+            <span>Contact</span>
+        </div>
+    </div>
+
+    <!-- cards -->
+    <div class="cards">
+        <div class="card">Card 1</div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+        <div class="card">Card 4</div>
+    </div>
+
+</body>
+</html>
