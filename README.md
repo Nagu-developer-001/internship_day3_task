@@ -1,1 +1,2 @@
 # internship_day3_task
+This project is a simple responsive webpage created using HTML and CSS Flexbox. Flexbox is used to align the navigation bar and content cards properly. The layout adjusts automatically for different screen sizes, making it mobile-friendly.
